@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Cat Valentine's Website</title>
+    <style>
+        body {
+            background-color: #ffe6f2; /* Soft pink background */
+            font-family: 'Arial', sans-serif; /* Or use Google Fonts like 'Dancing Script' for cuteness */
+            text-align: center;
+            padding: 20px;
+            color: #ff69b4; /* Hot pink text */
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .question {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493; /* Deeper pink on hover */
+        }
+        #message {
+            font-size: 1.3em;
+            margin-top: 20px;
+            display: none; /* Hidden initially */
+            color: #8b0000; /* Dark red for drama */
+        }
+        .cat-emoji {
+            font-size: 2em;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Valentine's Section -->
+    <section id="main">
+        <h1> Valentine's Day! 🐱❤️</h1>
+        <img src="https://source.unsplash.com/featured/?cute-cat" alt="Cute cat"> <!-- Replace with your own image URL if needed -->
+        <p>You + Me = Perfect Valentine ❤️!</p>
+    </section>
+    
+    <!-- Proposal Section -->
+    <section id="proposal">
+        <h1>🐱 Mahuuu Valentine's Proposal 🐱</h1>
+        <div class="question">
+            <p>Will you be my Valentine? ❤️</p>
+            <p class="cat-emoji">😺💕</p>
+        </div>
+        
+        <button id="yesBtn">Yes! 😍</button>
+        <button id="noBtn">No 😅</button>
+        
+        <div id="message"></div>
+    </section>
+    
+    <script>
+        // Get elements
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const messageDiv = document.getElementById('message');
+        
+        // Yes button: Show happy message
+        yesBtn.addEventListener('click', () => {
+            messageDiv.style.display = 'block';
+            messageDiv.innerHTML = 'Yay! You\'re my Valentine now! Let\'s cuddle like cats. 🐱❤️';
+        });
+        
+        // No button: Show funny "kidnapped" message
+        noBtn.addEventListener('click', () => {
+            messageDiv.style.display = 'block';
+            messageDiv.innerHTML = 'Oh no! Now you\'re being kidnapped by a squad of cute cats! They\'re coming for you... meow! 😺🚀 ( say yes 🔫?)';
+        });
+    </script>
+</body>
+</html>
